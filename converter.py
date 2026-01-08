@@ -30,6 +30,7 @@ def formatting_key(number: str, k):
 	if number == "494":
 		format = str(r'Problem [0-9]*\.')
 		flags = 10
+
 	if k == 1:
 		return format
 	if k == 2:
@@ -39,8 +40,8 @@ def main(argv=None):
 	parser = argparse.ArgumentParser(description="Read a .tex file, edit it, and write a new .tex file.")
 	parser.add_argument("input", help="Input .tex file")
 	parser.add_argument("number", help="Homework assignment number")
-	parser.add_argument("--course", help="math course number", default="494")
-	parser.add_argument("--compile", type=str2bool, nargs='?',
+	parser.add_argument("course", type=str, help="math course number", default="494")
+	parser.add_argument("compile", type=str2bool, nargs='?',
                         const=True, default=False,
                         help="Convert to pdf?")
 
@@ -135,14 +136,14 @@ def main(argv=None):
 		return 4
 	
 	# Cleanup auxiliary files generated during compilation
-#	aux_extensions = [".aux", ".log", ".fls", ".fdb_latexmk", ".toc", ".out"]
-#	for ext in aux_extensions:
-#		aux_path = out_path.with_suffix(ext)
-#		if aux_path.exists():
-#			try:
-#				aux_path.unlink()
-#			except Exception as e:
-#				print(f"Could not delete auxiliary file {aux_path}: {e}", file=sys.stderr)
+	aux_extensions = [".aux", ".log", ".fls", ".fdb_latexmk", ".toc", ".out"]
+	for ext in aux_extensions:
+		aux_path = out_path.with_suffix(ext)
+		if aux_path.exists():
+			try:
+				aux_path.unlink()
+			except Exception as e:
+				print(f"Could not delete auxiliary file {aux_path}: {e}", file=sys.stderr)
 
 	# Open the resulting PDF (best-effort, platform-dependent)
 	pdf_path = out_path.with_suffix(".pdf")
