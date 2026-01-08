@@ -1,0 +1,58 @@
+name: Copy Homework to Overleaf
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'homeworks/**'
+      - 'converter.py'
+
+jobs:
+  copy-to-overleaf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout homework-converter
+      uses: actions/checkout@v4
+      with:
+        repository: rp-sischo/homework-converter
+        path: homework-converter
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Run converter for all homeworks
+      run: |
+        cd homework-converter
+        for file in homeworks/*.tex; do
+          if [[ -f "$file" ]]; then
+            number=$(basename "$file" .tex | sed 's/HW//')
+            echo "Converting $file with number $number"
+            python converter.py "$file" "$number"
+          fi
+        done
+
+    - name: Clone overleaf repo
+      run: |
+        git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/rp-sischo/overleaf.git overleaf-repo
+        cd overleaf-repo
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Copy worksheets to overleaf
+      run: |
+        cp homework-converter/HW*_Worksheet.tex overleaf-repo/
+
+    - name: Commit and push to overleaf
+      run: |
+        cd overleaf-repo
+        git add HW3_Worksheet.tex
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Add/update homework worksheets from homework-converter"
+          git push
+        fi
