@@ -34,7 +34,7 @@ jobs:
 
     - name: Clone overleaf repo
       run: |
-        git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/rp-sischo/overleaf.git overleaf-repo
+        git clone https://x-access-token:${{ secrets.OVERLEAF_TOKEN }}@github.com/rp-sischo/overleaf.git overleaf-repo
         cd overleaf-repo
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
