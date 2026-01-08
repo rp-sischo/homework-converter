@@ -6,7 +6,6 @@ import sys
 import os
 import platform
 import subprocess
-from turtle import title
 
 # Source - https://stackoverflow.com/a
 # Posted by Maxim, modified by community. See post 'Timeline' for change history
@@ -40,8 +39,8 @@ def main(argv=None):
 	parser = argparse.ArgumentParser(description="Read a .tex file, edit it, and write a new .tex file.")
 	parser.add_argument("input", help="Input .tex file")
 	parser.add_argument("number", help="Homework assignment number")
-	parser.add_argument("course", type=str, help="math course number", default="494")
-	parser.add_argument("compile", type=str2bool, nargs='?',
+	parser.add_argument("--course", nargs="?", help="math course number", default="494")
+	parser.add_argument("--compile", type=str2bool, nargs='?',
                         const=True, default=False,
                         help="Convert to pdf?")
 
