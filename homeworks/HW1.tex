@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Math 494 \\
+ Homework Set 1 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+This assignment should be submitted in Gradescope by Thursday, January 15, at 11:59pm.
+
+Recall that if ( \(R,+, \cdot\) ) is a ring, then ( \(R,+\) ) is a group. In particular, the notation \(n a\) makes sense for every \(a \in R\) and \(n \in \mathbf{Z}\). If \(n \in \mathbf{Z}_{>0}\) and \(a \in R\), we may also consider \(a^{n}=a \cdot a \cdot \ldots \cdot a\) (where the product is taken \(n\) times). We also put \(a^{0}=1\). Note that the usual formulas hold:
+
+\[
+a^{m} \cdot a^{n}=a^{m+n} \quad \text { and } \quad\left(a^{m}\right)^{n}=a^{m n} \text { for all } m, n \in \mathbf{Z}_{\geq 0}
+\]
+
+Problem 1. Let \(R\) be a ring.\\
+i) Show that there is a unique ring homomorphism \(\varphi: \mathbf{Z} \rightarrow R\) (where the ring structure on \(\mathbf{Z}\) is the usual one).\\
+ii) Show that for every positive integer \(n\), there is at most one ring homomorphism \(f: \mathbf{Z} / n \mathbf{Z} \rightarrow R\), and there is such a homomorphism if and only if \(n 1_{R}=0\).
+
+Problem 2. Let \(R_{1}, R_{2}\), and \(R_{3}\) be rings. Show that if \(f: R_{1} \rightarrow R_{2}\) and \(g: R_{2} \rightarrow R_{3}\) are ring homomorphisms, then \(g \circ f\) is a ring homomorphism. Deduce that there is a category Rings, in which the objects are the rings and the morphisms are the ring homomorphisms.
+
+Problem 3. Let \(R\) be a ring and consider \(a, b \in R\).\\
+i) Show that if \(a\) and \(b\) commute (that is, we have \(a b=b a\) ), then Newton's binomial formula holds:
+
+\[
+(a+b)^{n}=\sum_{i=0}^{n}\binom{n}{i} a^{i} b^{n-i}
+\]
+
+ii) Give an example to show that this can fail if \(a\) and \(b\) do not commute.
+
+Problem 4. Let \(\varphi: R \rightarrow S\) be a ring homomorphism.\\
+i) Show that if \(I\) is a left (right, two-sided) ideal of \(S\), then
+
+\[
+\varphi^{-1}(I):=\{a \in R \mid \varphi(a) \in I\}
+\]
+
+is a left (respectively right, two-sided) ideal of \(R\).\\
+ii) Show that if \(J\) is a left (right, two-sided) ideal of \(R\) and \(\varphi\) is surjective, then
+
+\[
+\varphi(J):=\{\varphi(a) \mid a \in J\}
+\]
+
+is a left (respectively right, two-sided) ideal of \(S\).
+
+Problem 5. Let \(R_{1}\) and \(R_{2}\) be rings and let \(R=R_{1} \times R_{2}\).\\
+i) Show that if \(I_{1}\) and \(I_{2}\) are left (right, two-sided) ideals of \(R_{1}\) and \(R_{2}\), respectively, then \(I_{1} \times I_{2} \subseteq R_{1} \times R_{2}\) is a left (right, two-sided) ideal of \(R\).\\
+ii) Suppose now that \(R_{1}\) and \(R_{2}\) are commutative rings. Show that conversely, if \(I\) is an ideal of \(R\), then there are ideals \(I_{1} \subseteq R_{1}\) and \(I_{2} \subseteq R_{2}\) such that \(I=I_{1} \times I_{2}\).
+
+Problem 6. Let \(R\) be a ring. An element \(a \in R\) is idempotent if \(a^{2}=a\). For example, 0 and 1 are idempotents. A nontrivial idempotent is an idempotent that is different from 0 and 1 .\\
+i) Show that if \(a \in R\) is an idempotent, then \(1-a\) is an idempotent, too.\\
+ii) Suppose that \(R\) is commutative. Show that \(R\) has a nontrivial product decomposition (that is, there is an isomorphism \(R \simeq R_{1} \times R_{2}\), where \(R_{1}\) and \(R_{2}\) are nonzero rings) if and only if \(R\) has nontrivial idempotents.
+
+
+\end{document}
