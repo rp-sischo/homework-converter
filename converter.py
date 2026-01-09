@@ -51,7 +51,7 @@ def main(argv=None):
 		print(f"Input file {inp} not found", file=sys.stderr)
 		return 2
         
-	title = f"HW{args.number}_Worksheet.tex"
+	title = f"//workspaces//homework-converter//Worksheets//HW{args.number}_Worksheet.tex"
 	out_path = Path(title)
 
 	new_text = inp.read_text()
