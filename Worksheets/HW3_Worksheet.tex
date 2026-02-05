@@ -1,0 +1,61 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{Math 494 \\
+ Homework Set 3 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+This assignment should be submitted in Gradescope by Thursday, January 29, at 11:59pm.
+
+\newpage
+Problem 1. Let \(f: R_{1} \rightarrow R_{2}\) be a ring homomorphism between two commutative rings. Show that if \(S \subseteq R_{1}\) and \(T \subseteq R_{2}\) are multiplicative systems such that \(f(s) \in T\) for all \(s \in S\), then there is a unique ring homomorphism \(\widetilde{f}: S^{-1} R_{1} \rightarrow T^{-1} R_{2}\) such that \(\widetilde{f}\left(\frac{a}{1}\right)=\frac{f(a)}{1}\) for all \(a \in R_{1}\).
+
+The goal of the next problem is to describe all ideals (and, in particular, the prime ideals) in a fraction ring.
+
+\newpage
+Problem 2. Let \(R\) be a commutative ring and let \(S \subseteq R\) be a multiplicative system. Let \(\varphi: R \rightarrow S^{-1} R\) be the ring homomorphism given by \(\varphi(a)=\frac{a}{1}\).\\
+i) Show that if \(I\) is an ideal in \(R\) and if we define
+
+\[
+S^{-1} I:=\left\{\left.\frac{a}{s} \right\rvert\, a \in I, s \in S\right\},
+\]
+
+then \(S^{-1} I\) is an ideal in \(S^{-1} R\).\\
+ii) Show that if \(J\) is an ideal in \(R\) and we take \(I=\varphi^{-1}(J)\), then \(J=S^{-1} I\).\\
+iii) Give an example when we have two different ideals \(I_{1}\) and \(I_{2}\) in a ring \(R\) such that \(S^{-1} I_{1}=S^{-1} I_{2}\).\\
+iii) We say that an ideal \(I\) in \(R\) is \(S\)-saturated if whenever we have \(s a \in I\) for some \(s \in S\) and \(a \in R\), we have \(a \in I\). Show that given any ideal \(J\) in \(S^{-1} R\), there is a unique \(S\)-saturated ideal \(I\) in \(R\) such that \(J=S^{-1} I\); moreover, if \(I^{\prime}\) is any ideal in \(R\) such that \(S^{-1} I^{\prime}=J\), then \(I^{\prime} \subseteq I\).\\
+iv) Show that the map \(\mathfrak{p} \mapsto S^{-1} \mathfrak{p}\) gives an order-preserving bijection between the prime ideals \(\mathfrak{p}\) in \(R\) such that \(S \cap \mathfrak{p}=\emptyset\) and the prime ideals in \(S^{-1} R\).
+
+\newpage
+Problem 3. Let \(R\) be a commutative ring and let \(S \subseteq R\) be a multiplicative system. Given an ideal \(I\) in \(R\), we consider the ideal \(S^{-1} I\) in \(S^{-1} R\), as in the previous problem. We also consider \(T=\{\bar{s} \in R / I \mid s \in S\}\), which is a multiplicative system in \(R / I\). Show that there is a ring isomorphism
+
+\[
+T^{-1}(R / I) \simeq S^{-1} R / S^{-1} I .
+\]
+
+If \(S \subseteq R\) is a multiplicative system that does not contain zero-divisors, then the canonical homomorphism \(R \rightarrow S^{-1} R\) is injective. The next problem shows that when \(S\) contains zero-divisors, the behavior of the ring of fractions can be somewhat peculiar.
+
+\newpage
+Problem 4. Let \(R=\mathbb{Z} / 6 \mathbb{Z}\) and \(S=\{\overline{1}, \overline{2}, \overline{4}\} \subseteq R\). Show that there is a ring isomorphism
+
+\[
+S^{-1} R \simeq \mathbb{Z} / 3 \mathbb{Z}
+\]
+
+\newpage
+Problem 5. Let \(R\) be a commutative ring. Show that every prime ideal \(P\) in \(R\) contains a minimal prime ideal (that is, a prime ideal \(Q\) such that there is no prime ideal \(Q^{\prime}\) with \(Q^{\prime} \subsetneq Q\) ).
+
+
+\end{document}
