@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Math 494 \\
+ Homework Set 4 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+This assignment should be submitted in Gradescope by Monday, February 9, at 11:59pm.
+
+Problem 1. Decide whether each of the following ideals is maximal, prime, or radical:\\
+i) \(I=(x-\pi, y-1) \subseteq \mathbf{R}[x, y]\).\\
+ii) \(I=21 \mathbf{Z} \subseteq \mathbf{Z}\).\\
+iii) \(I=\left(\frac{1}{2}\right) \subseteq S^{-1} \mathbf{Z}\), where \(S=\left\{2^{m} \mid m \in \mathbf{Z}_{\geq 0}\right\}\).\\
+iv) \(I=\left(x^{2}+y^{2}\right) \subseteq \mathbf{C}[x, y]\).\\
+v) \(I=\left(x^{2} y, x y^{2}\right) \subseteq \mathbf{Q}[x, y]\).
+
+Problem 2. Let \(R\) be a ring.\\
+i) Show that if \(I\) is a two-sided ideal in \(R\) and \(R\) is left (right) Noetherian, then \(R / I\) is left (respectively, right) Noetherian.\\
+ii) Show that if \(R\) is commutative and Noetherian, then for every multiplicative system \(S \subseteq R\), the ring of fractions \(S^{-1} R\) is Noetherian.
+
+Problem 3. Let \(R\) be the ring of continuous functions defined on the interval \([0,1]\), with values in \(\mathbf{R}\), with respect to the usual addition and multiplication of functions. For every \(c \in[0,1]\), let \(M_{c}=\{f \in R \mid f(c)=0\}\).\\
+i) Prove that the ring \(R\) is not Noetherian.\\
+ii) Show that each \(M_{c}\) is a maximal ideal in \(R\).\\
+iii) Show that conversely, given any maximal ideal \(M\) in \(R\), there is \(c \in[0,1]\) such that \(M=M_{c}\). (Note: this part requires some familiarity with general topology).
+
+Problem 4. (Generalized Chinese Remainder Theorem). Let \(R\) be a commutative ring.\\
+i) Suppose that \(I_{1}\) and \(I_{2}\) are ideals in \(R\) such that \(I_{1}+I_{2}=R\). Show that given any element \(a \in R\), there is an element \(b \in R\) such that \(b \in I_{2}\) and \(b-a \in I_{1}\). Using this (and the corresponding fact with the roles of \(I_{1}\) and \(I_{2}\) switched), deduce that the canonical homomorphism
+
+\[
+R \rightarrow R / I_{1} \times R / I_{2}
+\]
+
+is surjective and conclude that
+
+\[
+R / I_{1} \cap I_{2} \simeq R / I_{1} \times R / I_{2}
+\]
+
+ii) Suppose that \(I_{1}, \ldots, I_{n}\) are ideals in \(R\) such that \(I_{i}+I_{j}=R\) for all \(i \neq j\). Show that in this case we have \(I_{1}+\left(I_{2} \cap \ldots \cap I_{n}\right)=R\). Use this, the assertion in i ), and induction on \(n\) to show that the canonical homomorphism \(R \rightarrow \prod_{i=1}^{n} R / I_{i}\) induces an isomorphism
+
+\[
+R /\left(I_{1} \cap \ldots \cap I_{n}\right) \simeq \prod_{i=1}^{n} R / I_{i}
+\]
+
+iii) Show that if \(I_{1}, \ldots, I_{n}\) are mutually distinct maximal ideals in \(R\), then they satisfy the hypothesis in ii).
+
+Recall that a nonempty closed subset \(Z\) of a topological space \(X\) is irreducible if whenever it is written as \(Z=Z_{1} \cup Z_{2}\), with \(Z_{1}\) and \(Z_{2}\) closed subsets, we have \(Z_{1}=Z\) or \(Z_{2}=Z\).
+
+Problem 5. Given a commutative ring \(R\), show that a closed subset \(Z \subseteq \operatorname{Spec}(R)\) is irreducible if and only if it can be written as \(V(I)\) for some prime ideal \(I\).
+
+
+\end{document}
